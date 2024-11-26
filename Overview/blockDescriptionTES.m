@@ -1,12 +1,8 @@
 %% Sand Battery 
-%%
 % 
-% <<maskIcon.PNG>>
+% <<maskIcon.png>>
 % 
-
- 
 % Copyright 2023 - 2024 The MathWorks, Inc.
-
 
 %% Description 
 % The Sand Battery block models a thermal energy storage by using sand as the energy storage medium. 
@@ -26,15 +22,14 @@
 % parallel-connected cells. To ensure the accuracy of the energy
 % calculation, the Biot number criterion internally constraints the mass of
 % the sand associated with the heating coil or moist air pipe.
-
    %%
    % 
-   % <<TESnetwork.PNG>>
+   % <<TESnetwork.png>>
    % 
 % This figure shows the sand battery configuration when you set the |Number of coil rows| and |Number of coils in each row| parameters to 2. 
  %%
    % 
-   % <<sandBattery.PNG>>
+   % <<sandBattery.png>>
    % 
 %% Ports 
 %%
@@ -51,12 +46,10 @@
 %%%
 % * *tH* — Thermal conserving port associated with the heat leakage from the thermal energy storage (TES).
 %
-
-
 %% Parameters
 %
 % 
-% <<blockMaskTES.PNG>>
+% <<blockMaskTES.png>>
 % 
 % 
 %
@@ -115,7 +108,3 @@
 %
 % * *Initial sand mass temperature* — Initial temperature of the sand at the beginning of the simulation, specified as a positive scalar.
 %
-
-
-
-

@@ -1,6 +1,5 @@
 %% Residential Building Heating with TES and PV 
-
-
+%
 % Copyright 2023 - 2024 The MathWorks, Inc.
 
 %% Model Overview
@@ -32,7 +31,7 @@
 % This picture shows equivalent circuit of MPPT.
 %
 % 
-% <<MPPTcircuit.PNG>>
+% <<MPPTcircuit.png>>
 %
 %
 % The MPPT Converter subsystem receives two inputs:
@@ -65,12 +64,10 @@
 %
 % To model the sand battery, the Thermal energy storage subsystem uses a
 % Sand TES custom block.
-% To learn more about the custom block, see <blockDescriptionTES.html Sand 
+% To learn more about the custom block, see <matlab:web('blockDescriptionTES.html') Sand 
 % Battery>
 %
-
 %% Set Model Parameters
 % * <matlab:open('ThermalBatterySetParam.m') Set Thermal Battery Parameters>
 % * <matlab:open('residentialUnitSetParam.m') Set Residential Unit Parameters>
- 
-    
+%

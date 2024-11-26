@@ -10,7 +10,7 @@ TestFolder = fullfile(currentProject().RootFolder, "Tests", "NegativeTests");
 
 %% Test Suite & Runner
 
-testPath = fullfile(TestFolder, "SandBatteryNegTest.m");
+testPath = fullfile(TestFolder, "SandBatteryNegativeTest.m");
 suite = [matlab.unittest.TestSuite.fromFile( testPath)];
 
 runner = matlab.unittest.TestRunner.withTextOutput( ...

@@ -3,7 +3,6 @@
 
 % Copyright 2023 - 2024 The MathWorks, Inc.
 
-% house = struct();% House construction parameters
 resUnitParams.lenHouse = 10; % House length [m]
 resUnitParams.widHouse = 10; % House width [m]
 resUnitParams.htHouse = 5; % House height [m]

@@ -1,8 +1,9 @@
 %% Thermal Energy Storage Design with Simscape(TM)
 % 
 % This repository contains models to help you design thermal energy storage systems (TES) and select photovoltaic (PV) panels for heating residential buildings.
+%
 % Copyright 2023 - 2024 The MathWorks, Inc.
-
+%
 %% Overview
 % Climate change and its effects on the day-to-day life are an upward trend. 
 % To offset the ill effects of climate change, all major world economies adapted aggressive plans to cut the greenhouse emissions.
@@ -22,14 +23,13 @@ open_system('ResidentialBuildingTESandPVcell')
 % * <matlab:open('residentialHeatingThermalBattery.mlx') Residential Heating with Thermal Energy Storage>
 %% Documentation
 %
-% * <ResidentialBuildingTESandPVcell.html Residential 
+% * <matlab:web('ResidentialBuildingTESandPVcell.html') Residential 
 % Building Heating with rooftop PV and sand battery>
 % 
-% * <blockDescriptionTES.html Sand 
-% Battery>
+% * <matlab:web('blockDescriptionTES.html') Sand Battery>
 % 
 %% Models
 %
-% * To open the residential heating model <matlab:open_system('ResidentialBuildingTESandPVCell.slx') click here>
+% * To open the residential heating model <matlab:open_system('ResidentialBuildingTESandPVcell.slx') click here>
+%
 bdclose('ResidentialBuildingTESandPVcell')
-    
