@@ -10,7 +10,7 @@ While you cannot standardize the storing of electrical power for all application
 the electrical heating and burning of fossil fuels for heating buildings.
 Before installing a TES hardware, you must also perform a basic analysis of return on capital investment.
 
-[![View Thermal Energy Storage Design with Simscape on File Exchange](https://www.mathworks.com/matlabcentral/images/matlab-file-exchange.svg)](https://www.mathworks.com/matlabcentral/fileexchange/thermal-energy-storage-design-with-simscape)
+[![View Thermal Energy Storage Design with Simscape on File Exchange](https://www.mathworks.com/matlabcentral/images/matlab-file-exchange.svg)](https://www.mathworks.com/matlabcentral/fileexchange/176408-thermal-energy-storage-design-with-simscape)
 
 [![Open in MATLAB Online](https://www.mathworks.com/images/responsive/global/open-in-matlab-online.svg)](https://matlab.mathworks.com/open/github/v1?repo=simscape/Thermal-Energy-Storage-Simscape)
 
