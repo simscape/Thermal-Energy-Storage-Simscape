@@ -1,6 +1,6 @@
 %% Residential Building Heating with TES and PV 
 %
-% Copyright 2023 - 2024 The MathWorks, Inc.
+% Copyright 2023 - 2025 The MathWorks, Inc.
 
 %% Model Overview
 % The residential heating model comprises a rooftop photovoltaic (PV) panel 

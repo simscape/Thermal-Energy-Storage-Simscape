@@ -33,4 +33,4 @@ This repository contains models to help you design thermal energy storage system
 * residentialHeatingWithSandTES.prj to get started with the project. 
 * Requires MATLAB&reg; release R2023a or newer.
 
-Copyright 2023 - 2024 The MathWorks, Inc.
+Copyright 2023 - 2025 The MathWorks, Inc.

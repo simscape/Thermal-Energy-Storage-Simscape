@@ -2,7 +2,7 @@
 % 
 % <<maskIcon.png>>
 % 
-% Copyright 2023 - 2024 The MathWorks, Inc.
+% Copyright 2023 - 2025 The MathWorks, Inc.
 
 %% Description 
 % The Sand Battery block models a thermal energy storage by using sand as the energy storage medium. 

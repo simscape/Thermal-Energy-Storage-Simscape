@@ -1,12 +1,17 @@
-
-<!DOCTYPE html
-  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
-<html><head>
-      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-   <!--
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<!--
 This HTML was auto-generated from MATLAB code.
 To make changes, update the MATLAB code and republish this document.
-      --><title>thermalEnergyStorageDesignOverview</title><meta name="generator" content="MATLAB 9.14"><link rel="schema.DC" href="http://purl.org/dc/elements/1.1/"><meta name="DC.date" content="2024-11-26"><meta name="DC.source" content="thermalEnergyStorageDesignOverview.m"><style type="text/css">
+      -->
+<title>thermalEnergyStorageDesignOverview</title>
+<meta name="generator" content="MATLAB 23.2">
+<link rel="schema.DC" href="http://purl.org/dc/elements/1.1/">
+<meta name="DC.date" content="2025-12-11">
+<meta name="DC.source" content="thermalEnergyStorageDesignOverview.m">
+<style type="text/css">
 html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}:focus{outine:0}ins{text-decoration:none}del{text-decoration:line-through}table{border-collapse:collapse;border-spacing:0}
 
 html { min-height:100%; margin-bottom:1px; }
@@ -67,13 +72,85 @@ table td { padding:7px 5px; text-align:left; vertical-align:top; border:1px soli
 
 
 
-  </style></head><body><div class="content"><h2>Contents</h2><div><ul><li><a href="#1">Thermal Energy Storage Design with Simscape&#8482;</a></li><li><a href="#2">Overview</a></li><li><a href="#5">Design Workflow</a></li><li><a href="#6">Documentation</a></li><li><a href="#7">Models</a></li></ul></div><h2 id="1">Thermal Energy Storage Design with Simscape&#8482;</h2><p>This repository contains models to help you design thermal energy storage systems (TES) and select photovoltaic (PV) panels for heating residential buildings.</p><h2 id="2">Overview</h2><p>Climate change and its effects on the day-to-day life are an upward trend. To offset the ill effects of climate change, all major world economies adapted aggressive plans to cut the greenhouse emissions. Renewable energy sources are a promising solution to meet the increasing energy demands and reduce the carbon footprint. To bridge the gap between the demand and the generation of the renewable power, you must design an effective energy storage system.</p><p>The market offers different energy storage technologies. While you cannot standardize the storing of electrical power for all applications, you can possibly use the TES to replace the electrical heating and burning of fossil fuels for heating buildings. Before installing a TES hardware, you must also perform a basic analysis of return on capital investment.</p><img vspace="5" hspace="5" src="thermalEnergyStorageDesignOverview_01.png" alt=""> <h2 id="5">Design Workflow</h2><div><ul><li><a href="matlab:open('residentialHeatingThermalBattery.mlx')">Residential Heating with Thermal Energy Storage</a></li></ul></div><h2 id="6">Documentation</h2><div><ul><li><a href="matlab:web('ResidentialBuildingTESandPVcell.html')">Residential Building Heating with rooftop PV and sand battery</a></li></ul></div><div><ul><li><a href="matlab:web('blockDescriptionTES.html')">Sand Battery</a></li></ul></div><h2 id="7">Models</h2><div><ul><li>To open the residential heating model <a href="matlab:open_system('ResidentialBuildingTESandPVcell.slx')">click here</a></li></ul></div><p class="footer">Copyright 2023 - 2024 The MathWorks, Inc.<br><a href="https://www.mathworks.com/products/matlab/">Published with MATLAB&reg; R2023a</a><br></p></div><!--
+  </style>
+</head>
+<body>
+<div class="content">
+<h2>Contents</h2>
+<div>
+<ul>
+<li>
+<a href="#1">Thermal Energy Storage Design with Simscape&trade;</a>
+</li>
+<li>
+<a href="#2">Overview</a>
+</li>
+<li>
+<a href="#5">Design Workflow</a>
+</li>
+<li>
+<a href="#6">Documentation</a>
+</li>
+<li>
+<a href="#7">Models</a>
+</li>
+</ul>
+</div>
+<h2 id="1">Thermal Energy Storage Design with Simscape&trade;</h2>
+<p>This repository contains models to help you design thermal energy storage systems (TES) and select photovoltaic (PV) panels for heating residential buildings.</p>
+<pre class="codeinput">
+<span class="comment">%</span>
+</pre>
+<h2 id="2">Overview</h2>
+<p>Climate change and its effects on the day-to-day life are an upward trend. To offset the ill effects of climate change, all major world economies adapted aggressive plans to cut the greenhouse emissions. Renewable energy sources are a promising solution to meet the increasing energy demands and reduce the carbon footprint. To bridge the gap between the demand and the generation of the renewable power, you must design an effective energy storage system.</p>
+<p>The market offers different energy storage technologies. While you cannot standardize the storing of electrical power for all applications, you can possibly use the TES to replace the electrical heating and burning of fossil fuels for heating buildings. Before installing a TES hardware, you must also perform a basic analysis of return on capital investment.</p>
+<pre class="codeinput">open_system(<span class="string">'ResidentialBuildingTESandPVcell'</span>)
+<span class="comment">%</span>
+</pre>
+<img vspace="5" hspace="5" src="thermalEnergyStorageDesignOverview_01.png" alt=""> <h2 id="5">Design Workflow</h2>
+<div>
+<ul>
+<li>
+<a href="matlab:open('residentialHeatingThermalBattery.mlx')">Residential Heating with Thermal Energy Storage</a>
+</li>
+</ul>
+</div>
+<h2 id="6">Documentation</h2>
+<div>
+<ul>
+<li>
+<a href="matlab:web('ResidentialBuildingTESandPVcell.html')">Residential Building Heating with rooftop PV and sand battery</a>
+</li>
+</ul>
+</div>
+<div>
+<ul>
+<li>
+<a href="matlab:web('blockDescriptionTES.html')">Sand Battery</a>
+</li>
+</ul>
+</div>
+<h2 id="7">Models</h2>
+<div>
+<ul>
+<li>To open the residential heating model <a href="matlab:open_system('ResidentialBuildingTESandPVcell.slx')">click here</a>
+</li>
+</ul>
+</div>
+<pre class="codeinput">bdclose(<span class="string">'ResidentialBuildingTESandPVcell'</span>)
+</pre>
+<p class="footer">Copyright 2023 - 2025 The MathWorks, Inc.<br>
+<a href="https://www.mathworks.com/products/matlab/">Published with MATLAB&reg; R2023b</a>
+<br>
+</p>
+</div>
+<!--
 ##### SOURCE BEGIN #####
 %% Thermal Energy Storage Design with Simscape(TM)
 % 
 % This repository contains models to help you design thermal energy storage systems (TES) and select photovoltaic (PV) panels for heating residential buildings.
 %
-% Copyright 2023 - 2024 The MathWorks, Inc.
+% Copyright 2023 - 2025 The MathWorks, Inc.
 %
 %% Overview
 % Climate change and its effects on the day-to-day life are an upward trend. 
@@ -106,4 +183,6 @@ open_system('ResidentialBuildingTESandPVcell')
 bdclose('ResidentialBuildingTESandPVcell')
 
 ##### SOURCE END #####
---></body></html>
+-->
+</body>
+</html>

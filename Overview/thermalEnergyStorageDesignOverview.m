@@ -2,7 +2,7 @@
 % 
 % This repository contains models to help you design thermal energy storage systems (TES) and select photovoltaic (PV) panels for heating residential buildings.
 %
-% Copyright 2023 - 2024 The MathWorks, Inc.
+% Copyright 2023 - 2025 The MathWorks, Inc.
 %
 %% Overview
 % Climate change and its effects on the day-to-day life are an upward trend. 
