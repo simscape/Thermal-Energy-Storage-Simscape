@@ -1,12 +1,17 @@
-
-<!DOCTYPE html
-  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
-<html><head>
-      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-   <!--
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<!--
 This HTML was auto-generated from MATLAB code.
 To make changes, update the MATLAB code and republish this document.
-      --><title>Sand Battery</title><meta name="generator" content="MATLAB 9.14"><link rel="schema.DC" href="http://purl.org/dc/elements/1.1/"><meta name="DC.date" content="2024-11-26"><meta name="DC.source" content="blockDescriptionTES.m"><style type="text/css">
+      -->
+<title>Sand Battery</title>
+<meta name="generator" content="MATLAB 23.2">
+<link rel="schema.DC" href="http://purl.org/dc/elements/1.1/">
+<meta name="DC.date" content="2025-12-11">
+<meta name="DC.source" content="blockDescriptionTES.m">
+<style type="text/css">
 html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}:focus{outine:0}ins{text-decoration:none}del{text-decoration:line-through}table{border-collapse:collapse;border-spacing:0}
 
 html { min-height:100%; margin-bottom:1px; }
@@ -67,13 +72,218 @@ table td { padding:7px 5px; text-align:left; vertical-align:top; border:1px soli
 
 
 
-  </style></head><body><div class="content"><h1>Sand Battery</h1><!--introduction--><p><img vspace="5" hspace="5" src="maskIcon.png" alt=""> </p><!--/introduction--><h2>Contents</h2><div><ul><li><a href="#1">Description</a></li><li><a href="#5">Ports</a></li><li><a href="#12">Parameters</a></li></ul></div><h2 id="1">Description</h2><p>The Sand Battery block models a thermal energy storage by using sand as the energy storage medium. The block stores the energy in form of sensible heat of the sand. The block models a network of electrical heating coil, hot sand mass, cold sand mass, and moist air pipe. The subcomponents connect through each other using Conductive Heat Transfer blocks. The electrical heater and the hot sand mass connect to each other using a Radiative Heat Transfer block because, at high electrical heater temperatures, the radiation heat transfer is the dominant mode of heat transfer between the heater and the sand.</p><p>This figure shows the model of a single unit cell of the sand battery. To calculate the sand battery energy storage, the block multiplies the thermal energy stored in a single cell by total number of cells. To calculate the total number of celles, the block multiplies the values of the <tt>Number of coil rows</tt> and <tt>Number of coils in each row</tt> parameters. The block calculates all the electrical and heat transfer resistances by assuming parallel-connected cells. To ensure the accuracy of the energy calculation, the Biot number criterion internally constraints the mass of the sand associated with the heating coil or moist air pipe.</p><p><img vspace="5" hspace="5" src="TESnetwork.png" alt=""> </p><p>This figure shows the sand battery configuration when you set the <tt>Number of coil rows</tt> and <tt>Number of coils in each row</tt> parameters to 2.</p><p><img vspace="5" hspace="5" src="sandBattery.png" alt=""> </p><h2 id="5">Ports</h2><p><b>Conserving</b></p><div><ul><li><b>e+</b> &#8212; Electrical conserving port associated with the positive node of the power source.</li></ul></div><div><ul><li><b>e-</b> &#8212; Electrical conserving  port associated with the negative node of the power source.</li></ul></div><div><ul><li><b>iAir</b> &#8212; Moist air conserving port associated with the outlet side of flow source. A positive value denotes air inflow.</li></ul></div><div><ul><li><b>oAir</b> &#8212; Conserving moist air port associated with the inlet side of flow source. A positive value denotes air outflow.</li></ul></div><div><ul><li><b>tH</b> &#8212; Thermal conserving port associated with the heat leakage from the thermal energy storage (TES).</li></ul></div><h2 id="12">Parameters</h2><p><img vspace="5" hspace="5" src="blockMaskTES.png" alt=""> </p><p><b>Layout</b></p><div><ul><li><b>Coil shape</b> &#8212; Shape of heating and cooling coil, specified as <tt>Helical Coil</tt> or <tt>U-Shape Coil</tt>.</li></ul></div><div><ul><li><b>Number of coil rows</b> &#8212; Number of coil rows on a plane perpendicular to the flow of the current or air, specified as a positive scalar.</li></ul></div><div><ul><li><b>Number of coils in each row</b> &#8212; Number of coil columns in each row, specified as a positive scalar.</li></ul></div><div><ul><li><b>Reference temperature for heating potential</b> &#8212; Reference temperature for calculating the heating potential of the thermal battery, specified as a scalar. The block calculates the heating potential using the reference temperature as starting point.</li></ul></div><p><b>Heater Element</b></p><div><ul><li><b>Width (OD) of heating coil</b> &#8212; Width of the heating coil, specified as a positive scalar. This value is the same as the helix outer diameter for helical coils.</li></ul></div><div><ul><li><b>Depth of heating coil</b> &#8212; Depth of the heating coil, specified as a positive scalar.</li></ul></div><div><ul><li><b>Number of heating coil turns</b> &#8212;  Number of turns of the heating coil, specified as a positive scalar.</li></ul></div><div><ul><li><b>Dimeter of heater tube</b> &#8212; Diameter of the glass tube that surrounds the heater filament, specified as a positive scalar.</li></ul></div><div><ul><li><b>Heater filament thermal time constant</b> &#8212; Thermal time constant of the current-carrying heater filament, specified as a positive scalar.</li></ul></div><div><ul><li><b>Heater filament electrical resistance</b> &#8212; Electrical resistance of the heater filament, specified as a positive scalar.</li></ul></div><div><ul><li><b>Heater tube emissivity</b> &#8212; Radiational emissivity of the heater tube surface, specified as a positive scalar in the range [0,1].</li></ul></div><div><ul><li><b>Heater filament temperature upper limit</b> &#8212; Faulting temperature of the filament material, specified as a positive scalar.</li></ul></div><p><b>Air Duct</b></p><div><ul><li><b>Width (od) of cooling coil</b> &#8212; Width of the cooling coil, specified as a positive scalar. This value is the same as the helix outer diameter for helical coils.</li></ul></div><div><ul><li><b>Depth of cooling coil</b> &#8212; Depth of the cooling coil, specified as a positive scalar.</li></ul></div><div><ul><li><b>Number of cooling coil turns</b> &#8212; Number of turns of the cooling coil, specified as a positive scalar.</li></ul></div><div><ul><li><b>Hydraulic diameter of air pipe</b> &#8212; Internal diameter of the pipe, specified as a positive scalar.</li></ul></div><p><b>Sand Properties</b></p><div><ul><li><b>Density of sand</b> &#8212; Density of the sand, specified as a positive scalar.</li></ul></div><div><ul><li><b>Thermal conductivity of sand</b> &#8212; Thermal conductivity of the sand, specified as a positive scalar.</li></ul></div><div><ul><li><b>Specific heat of sand</b> &#8212; Specific heat of the sand, specified as a positive scalar.</li></ul></div><div><ul><li><b>Initial sand mass temperature</b> &#8212; Initial temperature of the sand at the beginning of the simulation, specified as a positive scalar.</li></ul></div><p class="footer">Copyright 2023 - 2024 The MathWorks, Inc.<br><a href="https://www.mathworks.com/products/matlab/">Published with MATLAB&reg; R2023a</a><br></p></div><!--
+  </style>
+</head>
+<body>
+<div class="content">
+<h1>Sand Battery</h1>
+<!--introduction-->
+<p>
+<img vspace="5" hspace="5" src="maskIcon.png" alt=""> </p>
+<!--/introduction-->
+<h2>Contents</h2>
+<div>
+<ul>
+<li>
+<a href="#1">Description</a>
+</li>
+<li>
+<a href="#5">Ports</a>
+</li>
+<li>
+<a href="#12">Parameters</a>
+</li>
+</ul>
+</div>
+<h2 id="1">Description</h2>
+<p>The Sand Battery block models a thermal energy storage by using sand as the energy storage medium. The block stores the energy in form of sensible heat of the sand. The block models a network of electrical heating coil, hot sand mass, cold sand mass, and moist air pipe. The subcomponents connect through each other using Conductive Heat Transfer blocks. The electrical heater and the hot sand mass connect to each other using a Radiative Heat Transfer block because, at high electrical heater temperatures, the radiation heat transfer is the dominant mode of heat transfer between the heater and the sand.</p>
+<p>This figure shows the model of a single unit cell of the sand battery. To calculate the sand battery energy storage, the block multiplies the thermal energy stored in a single cell by total number of cells. To calculate the total number of celles, the block multiplies the values of the <tt>Number of coil rows</tt> and <tt>Number of coils in each row</tt> parameters. The block calculates all the electrical and heat transfer resistances by assuming parallel-connected cells. To ensure the accuracy of the energy calculation, the Biot number criterion internally constraints the mass of the sand associated with the heating coil or moist air pipe.</p>
+<p>
+<img vspace="5" hspace="5" src="TESnetwork.png" alt=""> </p>
+<p>This figure shows the sand battery configuration when you set the <tt>Number of coil rows</tt> and <tt>Number of coils in each row</tt> parameters to 2.</p>
+<p>
+<img vspace="5" hspace="5" src="sandBattery.png" alt=""> </p>
+<h2 id="5">Ports</h2>
+<p>
+<b>Conserving</b>
+</p>
+<div>
+<ul>
+<li>
+<b>e+</b> &mdash; Electrical conserving port associated with the positive node of the power source.</li>
+</ul>
+</div>
+<div>
+<ul>
+<li>
+<b>e-</b> &mdash; Electrical conserving port associated with the negative node of the power source.</li>
+</ul>
+</div>
+<div>
+<ul>
+<li>
+<b>iAir</b> &mdash; Moist air conserving port associated with the outlet side of flow source. A positive value denotes air inflow.</li>
+</ul>
+</div>
+<div>
+<ul>
+<li>
+<b>oAir</b> &mdash; Conserving moist air port associated with the inlet side of flow source. A positive value denotes air outflow.</li>
+</ul>
+</div>
+<div>
+<ul>
+<li>
+<b>tH</b> &mdash; Thermal conserving port associated with the heat leakage from the thermal energy storage (TES).</li>
+</ul>
+</div>
+<h2 id="12">Parameters</h2>
+<p>
+<img vspace="5" hspace="5" src="blockMaskTES.png" alt=""> </p>
+<p>
+<b>Layout</b>
+</p>
+<div>
+<ul>
+<li>
+<b>Coil shape</b> &mdash; Shape of heating and cooling coil, specified as <tt>Helical Coil</tt> or <tt>U-Shape Coil</tt>.</li>
+</ul>
+</div>
+<div>
+<ul>
+<li>
+<b>Number of coil rows</b> &mdash; Number of coil rows on a plane perpendicular to the flow of the current or air, specified as a positive scalar.</li>
+</ul>
+</div>
+<div>
+<ul>
+<li>
+<b>Number of coils in each row</b> &mdash; Number of coil columns in each row, specified as a positive scalar.</li>
+</ul>
+</div>
+<div>
+<ul>
+<li>
+<b>Reference temperature for heating potential</b> &mdash; Reference temperature for calculating the heating potential of the thermal battery, specified as a scalar. The block calculates the heating potential using the reference temperature as starting point.</li>
+</ul>
+</div>
+<p>
+<b>Heater Element</b>
+</p>
+<div>
+<ul>
+<li>
+<b>Width (OD) of heating coil</b> &mdash; Width of the heating coil, specified as a positive scalar. This value is the same as the helix outer diameter for helical coils.</li>
+</ul>
+</div>
+<div>
+<ul>
+<li>
+<b>Depth of heating coil</b> &mdash; Depth of the heating coil, specified as a positive scalar.</li>
+</ul>
+</div>
+<div>
+<ul>
+<li>
+<b>Number of heating coil turns</b> &mdash; Number of turns of the heating coil, specified as a positive scalar.</li>
+</ul>
+</div>
+<div>
+<ul>
+<li>
+<b>Dimeter of heater tube</b> &mdash; Diameter of the glass tube that surrounds the heater filament, specified as a positive scalar.</li>
+</ul>
+</div>
+<div>
+<ul>
+<li>
+<b>Heater filament thermal time constant</b> &mdash; Thermal time constant of the current-carrying heater filament, specified as a positive scalar.</li>
+</ul>
+</div>
+<div>
+<ul>
+<li>
+<b>Heater filament electrical resistance</b> &mdash; Electrical resistance of the heater filament, specified as a positive scalar.</li>
+</ul>
+</div>
+<div>
+<ul>
+<li>
+<b>Heater tube emissivity</b> &mdash; Radiational emissivity of the heater tube surface, specified as a positive scalar in the range [0,1].</li>
+</ul>
+</div>
+<div>
+<ul>
+<li>
+<b>Heater filament temperature upper limit</b> &mdash; Faulting temperature of the filament material, specified as a positive scalar.</li>
+</ul>
+</div>
+<p>
+<b>Air Duct</b>
+</p>
+<div>
+<ul>
+<li>
+<b>Width (od) of cooling coil</b> &mdash; Width of the cooling coil, specified as a positive scalar. This value is the same as the helix outer diameter for helical coils.</li>
+</ul>
+</div>
+<div>
+<ul>
+<li>
+<b>Depth of cooling coil</b> &mdash; Depth of the cooling coil, specified as a positive scalar.</li>
+</ul>
+</div>
+<div>
+<ul>
+<li>
+<b>Number of cooling coil turns</b> &mdash; Number of turns of the cooling coil, specified as a positive scalar.</li>
+</ul>
+</div>
+<div>
+<ul>
+<li>
+<b>Hydraulic diameter of air pipe</b> &mdash; Internal diameter of the pipe, specified as a positive scalar.</li>
+</ul>
+</div>
+<p>
+<b>Sand Properties</b>
+</p>
+<div>
+<ul>
+<li>
+<b>Density of sand</b> &mdash; Density of the sand, specified as a positive scalar.</li>
+</ul>
+</div>
+<div>
+<ul>
+<li>
+<b>Thermal conductivity of sand</b> &mdash; Thermal conductivity of the sand, specified as a positive scalar.</li>
+</ul>
+</div>
+<div>
+<ul>
+<li>
+<b>Specific heat of sand</b> &mdash; Specific heat of the sand, specified as a positive scalar.</li>
+</ul>
+</div>
+<div>
+<ul>
+<li>
+<b>Initial sand mass temperature</b> &mdash; Initial temperature of the sand at the beginning of the simulation, specified as a positive scalar.</li>
+</ul>
+</div>
+<p class="footer">Copyright 2023 - 2025 The MathWorks, Inc.<br>
+<a href="https://www.mathworks.com/products/matlab/">Published with MATLAB&reg; R2023b</a>
+<br>
+</p>
+</div>
+<!--
 ##### SOURCE BEGIN #####
 %% Sand Battery 
 % 
 % <<maskIcon.png>>
 % 
-% Copyright 2023 - 2024 The MathWorks, Inc.
+% Copyright 2023 - 2025 The MathWorks, Inc.
 
 %% Description 
 % The Sand Battery block models a thermal energy storage by using sand as the energy storage medium. 
@@ -180,4 +390,6 @@ table td { padding:7px 5px; text-align:left; vertical-align:top; border:1px soli
 % * *Initial sand mass temperature* — Initial temperature of the sand at the beginning of the simulation, specified as a positive scalar.
 %
 ##### SOURCE END #####
---></body></html>
+-->
+</body>
+</html>
